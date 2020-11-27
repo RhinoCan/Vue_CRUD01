@@ -54,12 +54,13 @@ export default {
         { id: 1, description: "Get a handle on props", priority: "High", status: "Completed" },
         { id: 2, description: "Write a CRUD application in Vue", priority: "High", status: "Completed" }, 
         { id: 3, description: "Implement a live Vue app", priority: "High", status: "Pending" },
-        { id: 4, description: "Integrate Vuetify with Vue", priority: "High", status: "Pending" },
-        { id: 5, description: "Combine Vue, Vuetify and Laravel", priority: "High", status: "Pending" },
-        { id: 6, description: "Integrate Vuelidate with Vue", priority: "Low", status: "Pending" },
-        { id: 7, description: "Store/update on database", priority: "Medium", status: "Pending" },
-        { id: 8, description: "Finish Project A", priority: "Low", status: "Pending" },
-        { id: 9, description: "Finish Project B", priority: "Low", status: "Pending" },
+        { id: 4, description: "Test CRUD application with Dusk", priority: "High", status: "Pending" },
+        { id: 5, description: "Integrate Vuetify with Vue", priority: "High", status: "Pending" },
+        { id: 6, description: "Combine Vue, Vuetify and Laravel", priority: "High", status: "Pending" },
+        { id: 7, description: "Integrate Vuelidate with Vue", priority: "Low", status: "Pending" },
+        { id: 8, description: "Store/update on database", priority: "Medium", status: "Pending" },
+        { id: 9, description: "Finish Project A", priority: "Low", status: "Pending" },
+        { id: 10, description: "Finish Project B", priority: "Low", status: "Pending" },
       ],
     }
   },
@@ -68,7 +69,7 @@ export default {
       if (this.Debug >= 1) console.log(this.Name + ".requestForm() - formName: " + object.form + "; index: " + object.taskID);
       this.formToShow = object.form;
       this.taskID = object.taskID;
-      if (this.Debug >=2) console.log(this.Name + ".requestForm() - taskID saved in parent: " + this.taskID);
+      if (this.Debug >= 2) console.log(this.Name + ".requestForm() - taskID saved in parent: " + this.taskID);
     },
     createTask(newTask) {
       if (this.Debug >= 1) console.log(this.Name + ".createTask() - new Task - description: " + newTask.description + "; priority: " + newTask.priority + "; status: " + newTask.status);
