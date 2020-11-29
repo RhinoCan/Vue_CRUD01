@@ -11,7 +11,7 @@ When the user presses one of the buttons, the appropriate form for creating, upd
 
 The data being displayed in the To Do list originates in App.vue and never goes beyond the app. That means that the user can restore the original data by simply refreshing the page. 
 
-##Form Management
+## Form Management
 I decided to use the formToShow field and v-if statements to control which form, if any, was visible at any given time. This field is initialized to blank which always ensures that no form is initially displayed. 
 
 Whenever the Add button is clicked - there is only one Add button - formToShow is set to display the Add Task form. If the user presses Cancel on the Create Task form, the Create is aborted and the form disappears. If the user presses Create Task on the Create form and the data is valid, the new row is emitted to App.vue, which adds the row to the Todos array, and the Create form disappears.
@@ -20,14 +20,12 @@ If any of the Update buttons are clicked, the TaskID for the task on that row of
 
 If any of the Delete buttons are clicked, the TaskID for the task on that row of the table is passed to the Task Delete form and its data is displayed but can't be edited. If the user presses Cancel on the Delete form, the delete is aborted and the form disappears. If the user presses Delete Task on the Delete form, the TaskID of the row is emitted to App.vue, which removes the row from the Todos array, and the Delete form disappears.   
 
-##Possible Improvements
+## Possible Improvements
 1. A "real" app would most likely get its information from a database and update that database as the user creates, updates and deletes. I hope to make a new version of this app that includes that functionality in the near future, probably via Laravel. 
 2. The app would look slicker if it used Vuetify or something similar. 
 3. The editing of the app would look slicker if it used Vuelidate or something similar.
 4. Having the two sides of the page (below the date) in scrollable windows would make the app much better capable to handle data that has more rows and/or columns. 
 5. A component that lets users create, update or delete the data directly within the table rather than in a separate form would let the To Do list have the whole width of the screen to work with. I'm picturing something where each cell of the table is clickable so that you could change it (assuming your change passed edits) or a row could be deleted by clicking a Delete Task button. New tasks would involve clicking a button to create a new empty row which would also be edited to make sure it was entirely valid. An alternative would be for the To Do List to occupy the full width of the screen and all the height (aside from the header) and then display the forms on a new page whenever they are invoked. That would allow both the To Do List and the forms to be the full width of the screen. 
-
-===
 
 ## Project setup
 ```
