@@ -61,6 +61,7 @@ export default {
         { id: 8, description: "Store/update on database", priority: "Medium", status: "Pending" },
         { id: 9, description: "Finish Project A", priority: "Low", status: "Pending" },
         { id: 10, description: "Finish Project B", priority: "Low", status: "Pending" },
+        { id: 11, description: "Finish Project C", priority: "Low", status: "Pending" }
       ],
     }
   },
