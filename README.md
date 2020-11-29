@@ -1,4 +1,4 @@
-# vuedc_intro01
+# Vue_CRUD01
 
 This code started out as being the solutions to the exercises given during the Introduction to Vue meetups put on by the VueDC Meetup group in October and November 2020. I devitated from the exercises somewhat and built my own functionality, by making the app a full CRUD (Create Read Update Delete) that let me read the To Do list, add new tasks to it, update those tasks, and delete them. Once I got all of that working to my satisfaction, I decided to post it here. 
 
@@ -14,11 +14,11 @@ The data being displayed in the To Do list originates in **App.vue** and never g
 ## Form Management
 I decided to use the **formToShow** field and *v-if* statements to control which form, if any, was visible at any given time. This field is initialized to blank which always ensures that no form is initially displayed. 
 
-Whenever the *Add* button is clicked - there is only one *Add* button - **formToShow** is set to display the Create Task form. If the user presses *Cancel* on the Create Task form, the Create is aborted and the form disappears. If the user presses *Create Task* on the Create form and the data is valid, the new row is emitted to **App.vue**, which adds the row to the Todos array, and the Create form disappears.
+Whenever the *Add* button is clicked - there is only one *Add* button - **formToShow** is set to display the Create Task form. If the user presses *Cancel* on the Create Task form, the Create is aborted, **formToShow** is set to blank and the form disappears. If the user presses *Create Task* on the Create form and the data is valid, the new row is emitted to **App.vue**, which adds the row to the Todos array, **formToShow** is set to blank and the Create form disappears.
 
-If any of the *Update* buttons are clicked, the TaskID for the task on that row of the table is passed to the Task Update form and its data is displayed in editable fields. If the user presses *Cancel* on the Update form, the update is aborted and the form disappears. If the user presses *Update Task* on the Update form and the data is valid, the modified row is emitted to **App.vue**, which updates the Todos array, and the Update form disappears. 
+If any of the *Update* buttons are clicked, **formToShow** is set to display the Update Task form; the TaskID for the task on that row of the table is passed to the Task Update form and its data is displayed in editable fields. If the user presses *Cancel* on the Update form, the Update is aborted, **formToShow** is set to blank and the form disappears. If the user presses *Update Task* on the Update form and the data is valid, the modified row is emitted to **App.vue**, which updates the Todos array, **formToShow** is set to blank and the Update form disappears. 
 
-If any of the *Delete* buttons are clicked, the TaskID for the task on that row of the table is passed to the Task Delete form and its data is displayed but can't be edited. If the user presses *Cancel* on the Delete form, the delete is aborted and the form disappears. If the user presses *Delete Task* on the Delete form, the TaskID of the row is emitted to **App.vue**, which removes the row from the Todos array, and the Delete form disappears.   
+If any of the *Delete* buttons are clicked, **formToShow** is set to display the Delete Task form; the TaskID for the task on that row of the table is passed to the Task Delete form and its data is displayed but can't be edited. If the user presses *Cancel* on the Delete form, the delete is aborted, **formToShow** is set to blank and the form disappears. If the user presses *Delete Task* on the Delete form, the TaskID of the row is emitted to **App.vue**, which removes the row from the Todos array, **formToShow** is set to blank and the Delete form disappears.   
 
 ## Possible Improvements
 1. A "real" app would most likely get its information from a database and update that database as the user creates, updates and deletes. I hope to make a new version of this app that includes that functionality in the near future, probably via Laravel. 
