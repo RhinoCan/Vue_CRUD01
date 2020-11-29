@@ -27,6 +27,8 @@ If any of the Delete buttons are clicked, the TaskID for the task on that row of
 4. Having the two sides of the page (below the date) in scrollable windows would make the app much better capable to handle data that has more rows and/or columns. 
 5. A component that lets users create, update or delete the data directly within the table rather than in a separate form would let the To Do list have the whole width of the screen to work with. I'm picturing something where each cell of the table is clickable so that you could change it (assuming your change passed edits) or a row could be deleted by clicking a Delete Task button. New tasks would involve clicking a button to create a new empty row which would also be edited to make sure it was entirely valid. An alternative would be for the To Do List to occupy the full width of the screen and all the height (aside from the header) and then display the forms on a new page whenever they are invoked. That would allow both the To Do List and the forms to be the full width of the screen. 
 
+===
+
 ## Project setup
 ```
 npm install
@@ -34,6 +36,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
+
 npm run serve
 ```
 
